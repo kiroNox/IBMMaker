@@ -1,0 +1,99 @@
+{
+    "casoTitulo": "Solicitar Tarea",
+    "caso_nombre": "Solicitar Tarea",
+    "caso_id": "1",
+    "actores": "solicitante de servicio",
+    "descripcion": "Se encarga de solicitar servicios al departamento de servicios generales para el mantenimiento y mejora del area",
+    "casos_rel": "N/A",
+    "entradas": "solicitud y zona",
+    "salidas": "N/A",
+    "actor_1": "Solicitante de Servicios",
+    "actor_2": "Directorf",
+    "precondicion": "El solicitante de servicio encuentra una deficiencia en la infraestructura de la comunidad",
+    "poscondicion": "solicitud realizada",
+    "cursoTipico": [
+        {
+            "actor1": "Observa una deficiencia en la infraestructura",
+            "actor2": ""
+        },
+        {
+            "actor1": "informa al director de la deficiencia y la localización",
+            "actor2": ""
+        },
+        {
+            "actor1": "",
+            "actor2": "El director recibe la información y verifica la veracidad de la información"
+        },
+        {
+            "actor1": "",
+            "actor2": "crea la solicitud"
+        },
+        {
+            "actor1": "",
+            "actor2": "asigna solicitud a división correspondiente"
+        }
+    ],
+    "cursosAtipicos": [
+        {
+            "head": "El director concluye que la información no es veraz o la solicitud es innecesaria",
+            "pasos": [
+                {
+                    "actor1": "",
+                    "actor2": "desecha la solicitud de servicio"
+                },
+                {
+                    "actor1": "",
+                    "actor2": "El proceso concluye"
+                }
+            ]
+        },
+        {
+            "head": "el solicitante informa al personal diferente del director",
+            "pasos": [
+                {
+                    "actor1": "Informa al personal de la deficiencia",
+                    "actor2": ""
+                },
+                {
+                    "actor1": "",
+                    "actor2": "Recibe información por parte del personal informado"
+                },
+                {
+                    "actor1": "",
+                    "actor2": "El flujo continua en el paso 3 del curso tipico"
+                }
+            ]
+        },
+        {
+            "head": "El director es quien detecta la deficiencia",
+            "pasos": [
+                {
+                    "actor1": "",
+                    "actor2": "El flujo inicia desde el paso 4 del curso tipico"
+                }
+            ]
+        },
+        {
+            "head": "no tiene los permisos",
+            "pasos": [
+                {
+                    "actor1": "",
+                    "actor2": "muestra mensaje de error"
+                },
+                {
+                    "actor1": "el proceso continua en le paso 3 del curso tipico",
+                    "actor2": ""
+                }
+            ]
+        },
+        {
+            "head": "no tiene los permisos 2",
+            "pasos": [
+                {
+                    "actor1": "",
+                    "actor2": "muestra mensaje de error"
+                }
+            ]
+        }
+    ]
+}

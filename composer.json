@@ -1,0 +1,15 @@
+{
+    "name": "david/phpwordtest",
+    "require": {
+        "phpoffice/phpword": "^1.3"
+    },
+    "autoload": {
+        "classmap": [
+            "models"
+        ],
+        "files": [
+            "utilities.php"
+        ]
+    }
+
+}
