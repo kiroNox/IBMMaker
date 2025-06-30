@@ -1,20 +1,20 @@
 <?php 
 
  class Ibm{
-    public $casoTitulo;
-    public $caso_nombre;
-    public $caso_id;
-    public $actores;
-    public $descripcion;
-    public $casos_rel;
-    public $entradas;
-    public $salidas;
-    public $actor_1;
-    public $actor_2;
-    public array $cursoTipico;
-    public array $cursosAtipicos;
-    public $precondicion;
-    public $poscondicion;
+    private $casoTitulo;
+    private $caso_nombre;
+    private $caso_id;
+    private $actores;
+    private $descripcion;
+    private $casos_rel;
+    private $entradas;
+    private $salidas;
+    private $actor_1;
+    private $actor_2;
+    private array $cursoTipico;
+    private array $cursosAtipicos;
+    private $precondicion;
+    private $poscondicion;
 
  	public function __construct(
         $casoTitulo = null,
@@ -57,7 +57,7 @@
     public function __get($name){
         if(isset($this->$name)){
             // si la propiedad es un string y es igual a "N/A" vaciarla
-            if(is_string($this->$name) && $this->$name == "N/A"){
+            if(is_string($this->$name) && preg_match("/^(?:\s)*N\/A(?:\s)*$/i", $this->$name)){
                 $this->$name = "";
             }
         
