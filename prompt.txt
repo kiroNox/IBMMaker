@@ -153,3 +153,5 @@
 			}
 		]
 	}
+
+	una ves confirmes las restricciones y el entendimiento de la estructura espera la entrada de la historia para un nuevo json
