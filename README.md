@@ -9,4 +9,4 @@ se debe eliminar el ";" para activarlo, luego reiniciar el servidor apache
 los archivos creados se almacenan en la carpeta /resultados
 
 es neceario comporser para instalar las dependecias 
-viajar a la ruta con la consola de comandos y ejecutar composer init y seguir las instrucciones
+viajar a la ruta con la consola de comandos y ejecutar composer install
