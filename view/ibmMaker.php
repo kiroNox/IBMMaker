@@ -358,6 +358,7 @@
          * @param {casoJson} json
          */
         function verCaso(json){
+            totalCursosAtipicos = 0;
             document.getElementById("titulo").value = json.casoTitulo;
             document.getElementById("nombre").value = json.caso_nombre;
             document.getElementById("caso_id").value = json.caso_id;
@@ -375,7 +376,9 @@
             document.getElementById("actor_2").dispatchEvent(new Event('input'));
 
             let cursoTipico = document.getElementById("cursoTipico");
+            let cursosAtipicos = document.getElementById("cursoAtipico");
             cursoTipico.innerHTML = '';
+            cursosAtipicos.innerHTML = '';
 
             json.cursoTipico.forEach((paso) => {
                 AgregarPasoTipico(null,[paso.actor1,paso.actor2]);

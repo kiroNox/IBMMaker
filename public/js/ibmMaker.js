@@ -22,7 +22,10 @@
             // para mostrar una lista de los guardados que despues se pueden recuperar o eliminar
             let json = getJsonObject();
 
-            console.log(json);
+            if(!json){
+                return;
+            }
+
 
             if(saveLocalStorage.checked){
 
@@ -196,6 +199,12 @@
             agregarCursoAtipico();
         })
 
+        document.querySelector(".remove_cursoAtipico").addEventListener('click', (event) => {
+            eliminarCursoAtipico();
+        })
+
+
+
         var totalCursosAtipicos = 0;
         function agregarCursoAtipico(titulo = "", pasos = []){
             totalCursosAtipicos++;
@@ -306,6 +315,11 @@
                     agregaPasosAtipicos(container, cursoAtipicoNum, [], rowCaller);
                 }
 
+                button2.onclick = (event) => {
+                    let rowCaller = event.target.closest('div.row');
+                    eliminarPasoAtipico(rowCaller);
+                }
+
                 div.appendChild(button1);
                 div.appendChild(button2);
                 col.appendChild(label);
@@ -371,6 +385,22 @@
             }
 
 
+        }
+
+        function eliminarPasoAtipico(rowCaller){
+            rowCaller.parentNode.removeChild(rowCaller);
+        }
+        function eliminarCursoAtipico(contenedor = null){
+            if(contenedor == null){
+                let curso = document.querySelector("#cursoAtipico>div.cursoAtipicoContainer:last-child");
+                if(curso != null){
+                    curso.parentNode.removeChild(curso);
+                    totalCursosAtipicos--;
+                }
+            }
+            else{
+                contenedor.parentNode.removeChild(contenedor);
+            }
         }
 
 
